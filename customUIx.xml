@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui">
+  <ribbon startFromScratch="false">
+    <tabs>
+      <tab id="UserFunctionsTab1" label="Макросы" insertBeforeQ="TabAddIns" visible="true">
+        <group id="GROUP_CELL_FORMAT" label="Формат ячеек" imageMso="ListMacros" autoScale="false">
+          <menu id="MENU_FORMAT" imageMso="GroupControlFormatting" size="large" label="Смена формата">
+            <button id="ValueToText" label="В текст" imageMso="DataTypeText" onAction="ValueToText" visible="true" screentip="Значение в текст" supertip="Изменяет формат ячейки на текст" />
+            <button id="ValueToGeneral" label="В основной" imageMso="DataTypeGeneral" onAction="ValueToGeneral" visible="true" screentip="Значение в основной формат" supertip="Меняет формат ячейки на основной"></button>
+            <button id="ValueToFormula" label="В формулу" imageMso="DataTypeCalculatedColumn" onAction="ValueToFormula" visible="true" screentip="Значение в формулу" supertip="Преобразует значение ячейки в формулу с установкой основного формата для ячейки" />
+            <button id="FormulaAsText" label="Текст функции" imageMso="ShowFormulas" onAction="FormulaAsText" visible="true" screentip="Текст функции (локальный формат)" supertip="Преобразует формулу ячейки в текст с именами функций в локальном формате" />
+            <button id="FormulaAsTextInt" label="Текст функции (международный)" imageMso="ShowFormulas" onAction="FormulaAsTextInt" visible="true" screentip="Текст функции (международный формат)" supertip="Преобразует формулу ячейки в текст с именами функций в международном формате" />
+            <button id="MakeLocalAddress" label="Локальный адрес" imageMso="MacroRelativeReferences" onAction="MakeLocalAddress" visible="true" screentip="Локальный адрес" supertip="Преобразует внешние ссылки внутри формул в локальные адреса" />
+          </menu>
+          <menu id="MENU_COLOR" label="Цвет ячеек" imageMso="AppointmentColorDialog" size="large">
+            <button id="HighlightBlankCells" label="Закрасить пустые" imageMso="AppointmentColorDialog" onAction="HighlightBlankCells" visible="true" screentip="Закрасить пустые ячейки" supertip="Устанавливает цвет 8 для фона пустых ячеек в выделенном диапазоне" />
+            <button id="HighlightCellsWithFormulasReturningVoid" label="Закрасить пустые формулы" imageMso="AppointmentColorDialog" onAction="HighlightCellsWithFormulasReturningVoid" visible="true" screentip="Закрасить ячейки с формулами с пустыми значениями" supertip="Устанавливает цвет 8 для ячеек из выделенного диапазона, которые содержат формулы, возвращающие пустые значения при их вычислении" />
+            <button id="CellColor" label="Цвет ячейки" imageMso="ColorMenu" onAction="CellColor" visible="true" screentip="Цвет и фон ячейки" supertip="Отображение во всплывающем окне цвета текста и заливки выделенной ячейки" />
+            <button id="ConditionalFormattingColor" label="Цвет форматирования" imageMso="ConditionalFormattingMenu" onAction="ConditionalFormattingColor" visible="true" screentip="Цвет условного форматирования ячейки" supertip="Отображает во всплывающем окне текст и цвет фона из правила условного форматирования, примененного к ячейке" />
+          </menu>
+          <button id="ResetColumnWidth" label="Сброс столбца" imageMso="CellWidth" onAction="ResetColumnWidth" visible="true" screentip="Ширина столбца по умолчанию" supertip="Сбрасывает ширину столбца по умолчанию" />
+          <button id="ResetNoteSize" label="Сброс примечания" imageMso="PageScaleToFitScale" onAction="ResetNoteSize" visible="true" screentip="Сброс размеров примечания" supertip="Сбрасывает размер примечания к ячейке до значений по умолчанию" />
+          <button id="UpdateCell" label="Обновить" imageMso="EastAsianEditingMarks" onAction="UpdateCell" visible="true" screentip="Обновить ячейку" supertip="Автоматический повторный ввод формулы в ячейку" />
+          <button id="FillCells1" showLabel="false" image="FillColorYellow" label="Цвет 1" onAction="FillCells" visible="true" screentip="Цвет 1" supertip="Заливка выделенных ячеек цветом 1" tag="Цвет 1" />
+          <button id="FillCells2" showLabel="false" image="FillColorOrange" label="Цвет 2" onAction="FillCells" visible="true" screentip="Цвет 2" supertip="Заливка выделенных ячеек цветом 2" tag="Цвет 2" />
+          <button id="FillCells6" showLabel="false" image="FillColorRed" label="Цвет 6" onAction="FillCells" visible="true" screentip="Цвет 6" supertip="Заливка выделенных ячеек цветом 6" tag="Цвет 6" />
+          <button id="FillCells3" showLabel="false" image="FillColorLightGreen" label="Цвет 3" onAction="FillCells" visible="true" screentip="Цвет 3" supertip="Заливка выделенных ячеек цветом 3" tag="Цвет 3" />
+          <button id="FillCells4" showLabel="false" image="FillColorGreen" label="Цвет 4" onAction="FillCells" visible="true" screentip="Цвет 4" supertip="Заливка выделенных ячеек цветом 4" tag="Цвет 4" />
+          <button id="FillCells5" showLabel="false" image="FillColorLightBlue" label="Цвет 5" onAction="FillCells" visible="true" screentip="Цвет 5" supertip="Заливка выделенных ячеек цветом 5" tag="Цвет 5" />
+          <button id="FillCells7" showLabel="false" image="FillColorDarkRed" label="Цвет 7" onAction="FillCells" visible="true" screentip="Цвет 7" supertip="Заливка выделенных ячеек цветом 7" tag="Цвет 7" />
+          <button id="FillCells8" showLabel="false" image="FillColorLightPurple" label="Цвет 8" onAction="FillCells" visible="true" screentip="Цвет 8" supertip="Заливка выделенных ячеек цветом 8" tag="Цвет 8" />
+          <button id="FillCells9" showLabel="false" image="FillNoColor" label="Цвет 9" onAction="FillCells" visible="true" screentip="Цвет 9" supertip="Заливка выделенных ячеек цветом 9" tag="Цвет 9" />
+        </group>
+        <group id="COPY_AND_PASTE_GROUP" label="Копирование и вставка" imageMso="ListMacros" autoScale="false">
+          <button id="TextToClipboard" label="Текст" imageMso="Copy" onAction="TextToClipboard" visible="true" screentip="Текст в буфер обмена" supertip="Копирует текстовое значение из ячейки в буфер обмена" />
+          <button id="TextToClipboardSeparatorSelection" label="Копировать с диалогом" imageMso="Copy" onAction="TextToClipboardSeparatorSelection" visible="true" screentip="Копирует текст из диапазона ячеек с выбором разделителя" supertip="Копирует текст из выбранных ячеек в буфер обмена и объединяет значения с использованием указанного пользователем разделителя текста"></button>
+          <button id="NumToClipboard" label="Число" imageMso="Copy" onAction="NumToClipboard" visible="true" screentip="Число в буфер обмена" supertip="Копирует числовое значение из ячейки в буфер обмена. В случае диапазона ячеек значения из выбранных ячеек суммируются" />
+          <menu id="MENU_SPECIAL_COPYING" imageMso="CopyMenu" size="large" label="Особое копирование">
+            <button id="TextToClipboardDialog" label="Показать текст" imageMso="Copy" onAction="TextToClipboardDialog" visible="true" screentip="Показывает и копирует текст в буфер обмена" supertip="Копирует текстовое значение из ячейки в буфер обмена с отображением текста во всплывающем окне" />
+            <button id="FormulaToClipboard" label="Формула (международный)" imageMso="Copy" onAction="FormulaToClipboard" visible="true" screentip="Копирует формулу в буфер обмена (международный формат)" supertip="Копирует формулу из ячейки в буфер обмена в международном формате. В случае диапазона ячеек формулы объединяются с использованием табуляции" />
+            <button id="LocalFormulaToClipboard" label="Формула" imageMso="Copy" onAction="LocalFormulaToClipboard" visible="true" screentip="Копирует формулу в буфер обмена (локальный формат)" supertip="Копирует формулу из ячейки в буфер обмена в локальном формате. В случае диапазона ячеек формулы объединяются с использованием табуляции" />
+            <button id="RangeAddressToClipboard" label="Адрес диапазона" imageMso="Copy" onAction="RangeAddressToClipboard" visible="true" screentip="Адрес диапазона в буфер обмена" supertip="Копирует адрес диапазона в буфер обмена" />
+            <button id="CellAddressToClipboard" label="Адрес ячейки" imageMso="Copy" onAction="CellAddressToClipboard" visible="true" screentip="Адрес ячейки в буфер обмена" supertip="Копирует адрес диапазона в буфер обмена. В случае диапазона ячеек адреса ячеек объединяются точкой с запятой" />
+            <button id="FilledCellAdressToClipboard" label="Адрес непустой ячейки" imageMso="Copy" onAction="FilledCellAdressToClipboard" visible="true" screentip="Копирует адрес непустой ячейки" supertip="Копирует адрес непустой ячейки в буфер обмена. В случае диапазона ячеек адреса ячеек объединяются точкой с запятой" />
+          </menu>
+          <button id="PasteClipboard" size="large" label="Вставить" imageMso="PasteTextOnly" onAction="PasteClipboard" visible="true" screentip="Вставка текста из буфера обмена" supertip="Вставляет текст из буфера обмена в выбранную ячейку" />
+          <menu id="MENU_SPECIAL_PASTE" imageMso="PasteAllRules" size="large" label="Специальная вставка">
+            <button id="PastePrefixClipboard" label="В начало" image="AddPrefixToCell" onAction="PastePrefixClipboard" visible="true" screentip="Вставляет текст в начало ячейки" supertip="Вставляет текст из буфера обмена в начало текста ячейки" />
+            <button id="PasteSuffixClipboard" label="В конец" image="AddSuffixToCell" onAction="PasteSuffixClipboard" visible="true" screentip="Вставляет текст в конец ячейки" supertip="Вставляет текст из буфера обмена в конец текста ячейки" />
+            <button id="WrapSquareBrackets" label="Обернуть в []" image="WrapTextSquareBrackets" onAction="WrapSquareBrackets" visible="true" screentip="Обертывает ячейку в квадратные скобки" supertip="Обертывает текст ячейки в квадратные скобки" />
+          </menu>
+        </group>
+        <group id="GROUP_TEXT" label="Текст" imageMso="PhoneticGuideEdit" autoScale="false">
+          <menu id="MENU_EDIT_TEXT" imageMso="EditText" size="large" label="Правка текста">
+            <button id="TrimSpaces" label="Сжать пробелы" imageMso="SparklineClearSelected" onAction="TrimSpaces" visible="true" screentip="Удаляет лишние пробелы" supertip="Удаление начальных, конечных и двойных пробелов в тексте выбранной ячейки" />
+            <button id="SpecialsSymbols" label="Удалить непечатаемые символы" imageMso="EraserMenu" onAction="SpecialsSymbols" visible="true" screentip="Удаляет непечатаемые символы" supertip="Удалить пробельные и другие непечатаемые символы из текста в выбранной ячейке" />
+            <button id="ReplaceWithRegExp" label="Замена" image="RegExp" onAction="ReplaceWithRegExp" visible="true" screentip="Заменяет текст по шаблону" supertip="Ищет и заменяет текст в выбранной ячейке с помощью пользовательских регулярных выражений" />
+            <button id="ExtractWithRegExp" label="Извлечение" image="RegExp" onAction="ExtractWithRegExp" visible="true" screentip="Извлекает текст по шаблону" supertip="Ищет и извлекает текст из выбранной ячейки с помощью пользовательских регулярных выражений" />
+          </menu>
+          <button id="Uppercase" label="Строчные" imageMso="EquationNormalText" onAction="Uppercase" visible="true" screentip="Верхний регистр" supertip="Преобразует текст ячейки в верхний регистр" />
+          <button id="Lowercase" label="Прописные" imageMso="TextAllCaps" onAction="Lowercase" visible="true" screentip="Нижний регистр" supertip="Преобразует текст ячейки в нижний регистр" />
+          <button id="UcFirst" label="Как в предложении" imageMso="TextSmallCaps" onAction="UcFirst" visible="true" screentip="Как в предложении" supertip="Преобразует текст ячейки в регистр предложения (Первое слово с заглавной буквы, остальные слова с маленькой)" />
+        </group>
+        <group id="GROUP_TABLE" label="Таблицы" imageMso="AutoFormatDialog" autoScale="false">
+          <menu id="MENU_ROWS_TABLES" imageMso="GroupTableRowsAndColumns" size="large" label="Действия">
+            <button id="DuplicateCurrentRow" label="Дублировать" imageMso="PasteDuplicate" onAction="DuplicateCurrentRow" visible="true" screentip="Дублирует строку" supertip="Дублирует текущую строку в таблице" />
+            <button id="DeleteEvenRows" label="Удалить четные" imageMso="TableRowsDeleteExcel" onAction="DeleteEvenRows" visible="true" screentip="Удаляет четные строки в таблице" supertip="Удаляет в выделенном диапазоне все четные строки" />
+            <button id="SwapCells" label="Поменять местами" imageMso="PowerQueryAppendQuery" onAction="SwapCells" visible="true" screentip="Меняет местами два выделенных диапазона" supertip="Меняет местами выделенные диапазоны. Необходимо выделить две области (диапазона) одинакового размера с помощью клавиши Ctrl и запустить данную процедуру" />
+            <button id="ReverseOrderList" label="Обратный порядок" imageMso="ReverseSort" onAction="ReverseOrderList" visible="true" screentip="Сортирует выделенные ячейки в обратном порядке" supertip="Переставляет местами выделенные ячейки в обратном порядке" />
+            <button id="EditSmartTableRowInDlgWnd" label="Редактировать строку" imageMso="EnableInlineEdit" onAction="EditSmartTableRowInDlgWnd" visible="true" screentip="Редактировать строку" supertip="Позволяет редактировать ячейки выбранной строки умной таблицы в диалоговом окне" />
+          </menu>
+          <menu id="MENU_SPECIAL_GROUPING" imageMso="MergeOrSplitCells" size="large" label="Объединение">
+            <button id="MergeCellsAndText" label="Объединить с текстом" imageMso="MergeCells" onAction="MergeCellsAndText" visible="true" screentip="Объединить с текстом" supertip="Группировка выбранных ячеек с объединением их значений с использованием пользовательского разделителя" />
+            <button id="MergeByGroups" label="Объединить группами" image="MergeCellsByGroups" onAction="MergeByGroups" visible="true" screentip="Объединить группами" supertip="Раздельная группировка нескольких выделенных диапазонов" />
+            <button id="UngroupAndFillCells" label="Разгруппировать с копированием" image="UnmeregeCellsAndDuplicateValue" onAction="UngroupAndFillCells" visible="true" screentip="Разгруппировать с копированием" supertip="Разгруппировать группу ячеек с копированием общего текста в каждую извлеченную из группы ячейку" />
+          </menu>
+          <menu id="MENU_BLANK_ROWS" imageMso="GroupTableStylesExcel" size="large" label="Пустые строки">
+            <button id="SelectBlankRows" label="Выделить" imageMso="GroupTableLayout" onAction="SelectBlankRows" visible="true" screentip="Выделяет пустые строки" supertip="Выделяет пустые строки в таблице" />
+            <button id="DeleteBlankRows" label="Удалить" imageMso="DeleteRows" onAction="DeleteBlankRows" visible="true" screentip="Удаляет пустые строки" supertip="Удаляет пустые строки в таблице" />
+            <button id="HideBlankRows" label="Скрыть" imageMso="RowsHideTouch" onAction="HideBlankRows" visible="true" screentip="Скрывает пустые строки" supertip="Скрывает пустые строки в таблице" />
+            <button id="DuplicateBlankRows" label="Дублировать" imageMso="ShapeSheetInsertSection" onAction="DuplicateBlankRows" visible="true" screentip="Дублирует пустые строки" supertip="Дублирует пустые строки в таблице" />
+          </menu>
+          <menu id="MENU_WORK_WITH_TABLES" imageMso="AdpDiagramAddTable" size="large" label="Умные таблицы">
+            <button id="CompareColumnsWithConditionalFormatting" label="Построчное сравнение" imageMso="ConditionalFormattingHighlightCompareColumns" onAction="CompareColumnsWithConditionalFormatting" visible="true" screentip="Сравнивает построчно столбцы умной таблицы" supertip="Применяет правила условного форматирования к двум выбранным диапазонам для их построчного сравнения" />
+          </menu>
+        </group>
+        <group id="GROUP_MATHS" label="Математика" image="MathFunctions" autoScale="true">
+          <menu id="MENU_DIVIDING" imageMso="DivisionSign" size="large" label="Быстрое деление">
+            <button id="DevideValueBy10" label="ЗНАЧ/10" image="xDiv10" onAction="DevideValueBy10" visible="true" screentip="Разделить на 10" supertip="Делит числовое значение выделенной ячейки на 10" />
+            <button id="DevideValueBy100" label="ЗНАЧ/100" image="xDiv100" onAction="DevideValueBy100" visible="true" screentip="Разделить на 100" supertip="Делит числовое значение выделенной ячейки на 100" />
+            <button id="DevideValueBy1000" label="ЗНАЧ/1000" image="xDiv1000" onAction="DevideValueBy1000" visible="true" screentip="Разделить на 1000" supertip="Делит числовое значение выделенной ячейки на 1000" />
+          </menu>
+          <menu id="MENU_DIVIDING_BY_FORMULA" imageMso="DivisionSign" size="large" label="Быстрое деление формулой">
+            <button id="DivideBy10AsFormula" label="=ЗНАЧ/10" image="fxDiv10" onAction="DivideBy10AsFormula" visible="true" screentip="Разделить на 10 формулой" supertip="Делит формулой числовое значение ячейки на 10" />
+            <button id="DivideBy100AsFormula" label="=ЗНАЧ/100" image="fxDiv100" onAction="DivideBy100AsFormula" visible="true" screentip="Разделить на 100 формулой" supertip="Делит формулой числовое значение ячейки на 100" />
+            <button id="DivideBy1000AsFormula" label="=ЗНАЧ/1000" image="fxDiv1000" onAction="DivideBy1000AsFormula" visible="true" screentip="Разделить на 1000 формулой" supertip="Делит формулой числовое значение ячейки на 1000" />
+          </menu>
+          <menu id="MENU_FORMULA_EDIT" image="FormulaEdit" size="large" label="Изменение формул">
+            <button id="DelLastDivisor" label="Удалить последний делитель" image="RemoveLastDivider" onAction="DelLastDivisor" visible="true" screentip="Удалить последний делитель" supertip="Удалить из формулы последний делитель" />
+            <button id="DelLastMultiplier" label="Удалить последний множитель" image="RemoveLastMultiplier" onAction="DelLastMultiplier" visible="true" screentip="Удалить последний множитель" supertip="Удалить из формулы последний множитель" />
+            <button id="IncreaseRoundPrecision" label="Точность округления++" imageMso="DecimalsIncrease" onAction="IncreaseRoundPrecision" visible="true" screentip="Увеличить точность округления в ОКРУГЛ" supertip="Увеличить на разряд точность округления в функции ОКРУГЛ"></button>
+            <button id="DecreaseRoundPrecision" label="Точность округления--" imageMso="DecimalsDecrease" onAction="DecreaseRoundPrecision" visible="true" screentip="Уменьшить точность округления в ОКРУГЛ" supertip="Уменьшить на разряд точность округления в функции ОКРУГЛ" />
+          </menu>
+          <menu id="MENU_WRAP" imageMso="MatchBrace" size="large" label="Обертывание">
+            <button id="WrapSum" label="В СУММ" imageMso="AutoSum" onAction="WrapSum" visible="true" screentip="В СУММ" supertip="Обертывает значение ячейки в функцию СУММ" />
+            <button id="WrapRound" label="В ОКРУГЛ" image="AddFormulaMathRound" onAction="WrapRound" visible="true" screentip="В ОКРУГЛ" supertip="Обертывает значение ячейки в функцию ОКРУГЛ" />
+          </menu>
+          <button id="Median" label="Медиана" imageMso="M" onAction="Median" visible="true" screentip="Медиана" supertip="Заливка ячейки с медианным значением цветом 8 из цветовой палитры Excel. Предварительно необходимо выделить диапазон ячеек" />
+          <button id="MedianByColumns" label="Медиана по столбцам" imageMso="ConditionalFormattingNewRule" onAction="MedianByColumns" visible="true" screentip="Медиана по столбцам" supertip="Применение правил условного форматирования к выбранным столбцам таблицы для пометки строк таблицы, содержащих медианные значения" />
+          <button id="Divisors" label="Делители" image="Divisors" onAction="Divisors" visible="true" screentip="Делители" supertip="Определяет делители числа из выбранной ячейки и выводит их на текущем листе ниже в виде столбца" />
+        </group>
+        <group id="GROUP_WORKBOOKS_AND_SHEETS" label="Рабочие книги" imageMso="UpgradeWorkbook" autoScale="true">
+          <button id="MergeWorkbooks" label="Объединить рабочие книги" imageMso="PrintPreviewShrinkOnePage" onAction="MergeWorkbooks" visible="true" screentip="Объединить рабочие книги" supertip="Объединяет несколько рабочих книг в одну рабочую книгу" />
+          <button id="RemoveHiddenNames" label="Удалить скрытые имена" imageMso="GroupRemoveHiddenInformation" onAction="RemoveHiddenNames" visible="true" screentip="Удаляет скрытые имена" supertip="Удаляет скрытые имена из текущей книги" />
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+  <contextMenus>
+    <contextMenu idMso="ContextMenuListRange">
+      <menu id="CellsAllInsertOperation1" label="Вставить ячейки..." imageMso="CellsInsertSmart" insertBeforeMso="Cut">
+        <button idMso="TableRowsInsertAboveExcel" visible="true" />
+        <button idMso="TableRowsInsertBelowExcel" visible="true" />
+        <button idMso="TableColumnsInsertLeftExcel" visible="true" />
+        <button idMso="TableColumnsInsertRightExcel" visible="true" />
+        <menuSeparator id="MSeparator1" />
+        <button idMso="SheetRowsInsert" visible="true" />
+        <button idMso="SheetColumnsInsert" visible="true" />
+        <menuSeparator id="MSeparator2" />
+        <button idMso="CellsInsertDialog" visible="true" />
+        <button idMso="CellsInsertSmart" visible="true" />
+      </menu>
+      <menu id="CellsAllDeleteOperation1" label="Удалить ячейки..." imageMso="CellsDeleteSmart" insertBeforeMso="Cut">
+        <button idMso="TableRowsDeleteExcel" visible="true" />
+        <button idMso="TableColumnsDeleteExcel" visible="true" />
+        <menuSeparator id="MSeparator3" />
+        <button idMso="SheetRowsDelete" visible="true" />
+        <button idMso="SheetColumnsDelete" visible="true" />
+        <menuSeparator id="MSeparator4" />
+        <button idMso="CellsDelete" visible="true" />
+        <button idMso="CellsDeleteSmart" visible="true" />
+      </menu>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuCell">
+      <menu id="CellsAllInsertOperation2" label="Вставить ячейки..." insertBeforeMso="Cut">
+        <button idMso="SheetRowsInsert" visible="true" />
+        <button idMso="SheetColumnsInsert" visible="true" />
+        <menuSeparator id="MSeparator5" />
+        <button idMso="CellsInsertDialog" visible="true" />
+        <button idMso="CellsInsertSmart" visible="true" />
+      </menu>
+      <menu id="CellsAllDeleteOperation2" label="Удалить ячейки..." imageMso="CellsDeleteSmart" insertBeforeMso="Cut">
+        <button idMso="SheetRowsDelete" visible="true" />
+        <button idMso="SheetColumnsDelete" visible="true" />
+        <menuSeparator id="MSeparator6" />
+        <button idMso="CellsDelete" visible="true" />
+        <button idMso="CellsDeleteSmart" visible="true" />
+      </menu>
+    </contextMenu>
+  </contextMenus>
+</customUI>
