@@ -20,7 +20,6 @@ How to install?
 9. Select file userfunc.xlam and click Open.
 10. Click OK after back to Add-ins dialog.
 
-Для поддержки Excel IntelliSense также скопируйте в папку %UserProfile%\AppData\Roaming\Microsoft\AddIns файл ExcelDna.IntelliSense64.xll из папки dist репозитория либо скачайте его актуальную версию из репозитория проекта Excel-DNA IntelliSense (https://github.com/Excel-DNA/IntelliSense). Установите данное программное дополнение в Excel аналогично вышеприведенной инструкции.
 For support Excel IntelliSense, also copy file ExcelDna.IntelliSense64.xll from repository dist folder to folder %UserProfile%\AppData\Roaming\Microsoft\AddIns, or download latest version from Excel-DNA IntelliSense project repository. Install this third-party add-in same way as shown above.
 
 How to use?
