@@ -1,9 +1,7 @@
-﻿What is Userfunc VBA?
+﻿What is Userfunc_ru VBA?
 =====================
 
-Userfunc VBA is add-in for Microsoft Office Excel. Contains subroutines and functions for automating routine tasks of editing and checking tables, invoices and other business documentation.
-
-This add-in contains descriptions sheet for Excel IntelliSense. For enable tooltips appearing when entering function name in cell, similar to built-in Excel functions, also you need to connect a third-party add-on from Excel-DNA IntelliSense (https://github.com/Excel-DNA/IntelliSense). For example, ExcelDna.IntelliSense64.xll file.
+Userfunc_ru VBA is add-in for Microsoft Office Excel. Contains subroutines and functions for automating routine tasks of editing and checking tables, invoices and other business documentation.
 
 How to install?
 ---------------
@@ -17,6 +15,8 @@ How to install?
 8. The Add-ins dialog appears. In Add-Ins dialog, click Browse....
 9. Select file userfunc.xlam and click Open.
 10. Click OK after back to Add-ins dialog.
+
+This add-in contains descriptions sheet for Excel IntelliSense. For enable tooltips appearing when entering function name in cell, similar to built-in Excel functions, also you need to connect a third-party add-on from Excel-DNA IntelliSense (https://github.com/Excel-DNA/IntelliSense). For example, ExcelDna.IntelliSense64.xll file.
 
 For support Excel IntelliSense, also copy file ExcelDna.IntelliSense64.xll from repository dist folder to folder %UserProfile%\AppData\Roaming\Microsoft\AddIns, or download latest version from Excel-DNA IntelliSense project repository. Install this third-party add-in same way as shown above.
 
