@@ -1,9 +1,7 @@
 ﻿What is Userfunc VBA?
-==================
+=====================
 
 Userfunc VBA is add-in for Microsoft Office Excel. Contains subroutines and functions for automating routine tasks of editing and checking tables, invoices and other business documentation.
-
-This version add-in supports only russian version Excel 2013 x64 for Windows and newer. Some subroutines and functions also work in Excel for MacOS.
 
 This add-in contains descriptions sheet for Excel IntelliSense. For enable tooltips appearing when entering function name in cell, similar to built-in Excel functions, also you need to connect a third-party add-on from Excel-DNA IntelliSense (https://github.com/Excel-DNA/IntelliSense). For example, ExcelDna.IntelliSense64.xll file.
 
@@ -23,5 +21,12 @@ How to install?
 For support Excel IntelliSense, also copy file ExcelDna.IntelliSense64.xll from repository dist folder to folder %UserProfile%\AppData\Roaming\Microsoft\AddIns, or download latest version from Excel-DNA IntelliSense project repository. Install this third-party add-in same way as shown above.
 
 How to use?
------------------
+-----------
 After installing this add-in, new tab will appear in Excel ribbon - Macros. Select one or more cells and click any button on Macros tab. For some subroutines, it is possible to undo the action (undo) or repeat it (repeat) as with built-in Excel subroutines.
+
+System requirements
+-------------------
+* Windows 10-11 x64
+* Microsoft Office Excel 2013-365 x64
+* Support russian language and regional settings
+* Installed russian keyboard
