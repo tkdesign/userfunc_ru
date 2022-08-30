@@ -2634,7 +2634,7 @@ End Sub
 
 ' ----------------------------------------------------------------
 ' Procedure Name: MergeByGroups
-' Purpose:  Отменяет группировку нескольких выделенных диапазонов
+' Purpose:  Раздельно группирует несколько выделенных областей ячеек. Текст в ячейках также объединяется по группам
 ' Procedure Kind: Sub
 ' Procedure Access: Public
 ' Parameter control (IRibbonControl):
@@ -2685,18 +2685,33 @@ Sub MergeByGroups(control As IRibbonControl)
     Else
         Set TargetRange = Selection.SpecialCells(xlCellTypeVisible)
     End If
-    With TargetRange
-        For Each rCell In .Cells
-            ReDim Preserve sMergeArray(cntr - 1)
-            sMergeArray(cntr - 1) = rCell.Text
-            cntr = cntr + 1
-        Next rCell
-        sMergeStr = Join(sMergeArray, Result2)
+    Dim areaRange, areaValues, i, lr As Long, lc As Long, sRes As String
+    i = 1
+    Do
+        Set areaRange = TargetRange.Areas(i)
+        areaValues = TargetRange.Areas(i).Value
+        If IsArray(areaValues) Then
+            For lc = 1 To UBound(areaValues, 2)
+                For lr = 1 To UBound(areaValues, 1)
+                    If Len(areaValues(lr, lc)) Then
+                        If (Len(sRes)) Then
+                            sRes = sRes & Result2 & areaValues(lr, lc)
+                        Else
+                            sRes = areaValues(lr, lc)
+                        End If
+                    End If
+                Next lr
+            Next lc
+        Else
+            sRes = areaValues
+        End If
         Application.DisplayAlerts = False
-        .Merge Across:=False
+        areaRange.Merge Across:=False
         Application.DisplayAlerts = True
-        .Item(1).Value = sMergeStr
-    End With
+        areaRange.Item(1).Value = sRes
+        i = i + 1
+        sRes = ""
+    Loop While i <= TargetRange.Areas.Count
     On Error GoTo 0
     Exit Sub
 MergeByGroups_Error:
